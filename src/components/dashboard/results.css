@@ -1,0 +1,9 @@
+.searchResults{
+    max-height: 20px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+li{
+    list-style-type: lower-alpha;
+}

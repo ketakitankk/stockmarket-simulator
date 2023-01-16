@@ -1,0 +1,56 @@
+.portfolio-heading{
+    position: relative;
+    top: 90px;
+    /* left: 45%; */
+    color: black;
+    /* font-weight: 800 !important; */
+}
+
+.head{
+    font-weight: 600;
+    font-size: 40px;
+    z-index: 3;
+    background-color: white;
+}
+
+
+.table{
+    position: relative;
+    top: 25px;
+    /* margin-top: 10px; */
+    /* top: 60px; */
+    /* bottom: 10px; */
+    /* margin-top: 120px; */
+    /* bottom: 20px; */
+    font-size: 20px;
+    /* padding: 20px; */
+    border: 1px white;
+    margin: 20px;
+    padding-top: 40px;
+    /* overflow-y: hidden; */
+    /* overscroll-behavior-y:inherit; */
+    /* overscroll-behavior-y:initial; */
+
+}
+/* .data{
+    position: relative;
+    top: 120px;
+} */
+
+.loader{
+    position: relative;
+    top: 130px;
+    font-size: 20px;
+}
+
+.link{
+    position: relative;
+    /* bottom: 30px; */
+    top: 10px;
+    cursor: pointer;
+}
+
+.link:hover{
+    color: green;
+    font-weight: 600;
+}

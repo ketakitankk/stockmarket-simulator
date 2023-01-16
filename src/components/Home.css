@@ -1,0 +1,42 @@
+.heading {
+    animation: 1s ease-out 0s 1 slideInLeft;
+    margin: 0 0;
+  }
+
+  @keyframes slideInLeft {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+.arrow-button{
+    position: relative;
+}
+  .arrow{
+    /* bottom: auto; */
+    max-width: 20%;
+    position: relative;
+    text-align: center;
+    display: block;
+  }
+
+  .--btn-signup{
+    position:relative;
+    /* bottom: 160px; */
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    color: black;
+    border-color: black;
+    background-color: white;
+    border-radius: 11px;
+  }
+
+  .--btn-signup:hover{
+    color: white;
+    border-color: white;
+    background-color: green;
+  }
