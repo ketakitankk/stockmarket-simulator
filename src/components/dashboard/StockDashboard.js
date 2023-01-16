@@ -69,7 +69,7 @@ const StockDashboard = () => {
     if (stockName === undefined) {
       alert("Please enter stock name!");
     }
-    else if (quantity === "") {
+    else if (quantity === "" || typeof(quantity) != Int16Array) {
       alert("Please enter quantity!");
     }
     const q = query(collection(db, "user-transactions"), where("email", "==", email));
@@ -114,52 +114,59 @@ const StockDashboard = () => {
     if(quantity === ""){
       quantity = 1
     }
-    const price = parseInt(qoute) * parseInt(quantity);
-    const today = new Date();
-    const date = today.toDateString();
-    const time = today.toLocaleTimeString();
-    let countOfStock = 0;
-    const information = {
-      email,
-      name: stockName,
-      qoute: qoute,
-      amount: quantity,
-      // coins: coinsLeft,
-      price,
-      date,
-      time
-      // createdAt: Timestamp.now().toDate()
-    }
 
-    const q = query(collection(db, "user-transactions"), where("email", "==", email));
-    let id = "";
-    let newPrice = 0;
-    let newAmount = parseInt(quantity);
-    const querySnapshot = await getDocs(q);
-    querySnapshot.forEach((doc) => {
-      if (doc.data().name === stockName) {
-        countOfStock = countOfStock + 1;
-        console.log(doc.id);
-        id = doc.id;
-        newAmount = newAmount + parseInt(doc.data().amount);
-        newPrice = price + parseInt(doc.data().price);
-        // console.log(doc.id, " => ", doc.data());
+    if (typeof (quantity) !== Number) {
+      console.log(typeof (quantity));
+      alert("Enter a valid quantity");
+    }
+    if (typeof (quantity) === Number) {
+      const price = parseInt(qoute) * parseInt(quantity);
+      const today = new Date();
+      const date = today.toDateString();
+      const time = today.toLocaleTimeString();
+      let countOfStock = 0;
+      const information = {
+        email,
+        name: stockName,
+        qoute: qoute,
+        amount: quantity,
+        // coins: coinsLeft,
+        price,
+        date,
+        time
+        // createdAt: Timestamp.now().toDate()
       }
-    });
+
+      const q = query(collection(db, "user-transactions"), where("email", "==", email));
+      let id = "";
+      let newPrice = 0;
+      let newAmount = parseInt(quantity);
+      const querySnapshot = await getDocs(q);
+      querySnapshot.forEach((doc) => {
+        if (doc.data().name === stockName) {
+          countOfStock = countOfStock + 1;
+          console.log(doc.id);
+          id = doc.id;
+          newAmount = newAmount + parseInt(doc.data().amount);
+          newPrice = price + parseInt(doc.data().price);
+          // console.log(doc.id, " => ", doc.data());
+        }
+      });
 
 
-    if (countOfStock === 0) {
-      const docRef = await addDoc(collection(db, "user-transactions"), information);
-      // console.log("Document written with ID: ", docRef.id);
-      alert("Bought! :)");
-    }
-    else {
-      //update code
-      // console.log(countOfStock);
-      const cityRef = doc(db, 'user-transactions', id);
-      setDoc(cityRef, { amount: newAmount, price: newPrice }, { merge: true });
-      alert("Added quantity to portfolio! :)");
+      if (countOfStock === 0) {
+        const docRef = await addDoc(collection(db, "user-transactions"), information);
+        // console.log("Document written with ID: ", docRef.id);
+        alert("Bought! :)");
+      }
+      else {
+        //update code
+        // console.log(countOfStock);
+        const cityRef = doc(db, 'user-transactions', id);
+        setDoc(cityRef, { amount: newAmount, price: newPrice }, { merge: true });
+        alert("Added quantity to portfolio! :)");
       
+      }
     }
     // dispatch(ADD_TO_CART(information));
     

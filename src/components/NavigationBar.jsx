@@ -44,7 +44,7 @@ const NavigationBar = () => {
     signOut(auth)
       .then(() => {
         dispatch(remove_active_user())
-      navigate("/");
+      navigate("/stockmarket-simulator");
     }).catch((error) => {
       alert('Error... try again!')
     });
@@ -58,7 +58,7 @@ const NavigationBar = () => {
       <Navbar bg="light" variant={"light"} expand="lg" fixed="top">
         <Navbar.Brand className="stockSim">
           <ShowOnLogout>
-          <Nav.Link as={Link} to="/" className="stockSim">
+          <Nav.Link as={Link} to="/stockmarket-simulator" className="stockSim">
             stockSim
             <img src={logo} alt="logo" className="imgOfLogo" />
           </Nav.Link>
@@ -114,7 +114,7 @@ const NavigationBar = () => {
             </ShowOnLogin>
 
             <ShowOnLogin>
-            <Nav.Link as={Link} to="/" className="signUp"
+            <Nav.Link as={Link} to="/stockmarket-simulator" className="signUp"
               onClick={logoutUser}>
               logout
             </Nav.Link>

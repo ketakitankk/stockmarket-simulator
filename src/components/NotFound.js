@@ -7,7 +7,7 @@ const NotFound = () => {
     <section className='about-us'>
         <div className='--my2 --py2 --p --text-center'>
         <h1 className="--text-center --fw-bold --spacing-text --p --my">Oops... Page not found</h1>
-          <Link to="/" className='--text-center --m --p'>Go back home!</Link>
+          <Link to="/stockmarket-simulator" className='--text-center --m --p'>Go back home!</Link>
         </div>
     </section>
 

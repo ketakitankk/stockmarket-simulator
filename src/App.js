@@ -26,7 +26,7 @@ function App() {
       <BrowserRouter>
         <NavigationBar/>
         <Routes>
-          <Route path="/" element={<Home/>}></Route>
+          <Route path="/stockmarket-simulator" element={<Home/>}></Route>
           <Route path="/about" element={<About />} />
           <Route path="/features" element={<Features/>}></Route>
           <Route path="/contact" element={<ContactUs />}></Route>
