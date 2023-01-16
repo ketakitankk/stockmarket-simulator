@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.43ff5ac4.css",
-    "main.js": "/static/js/main.565ce3a5.js",
-    "static/media/featurePlus.svg": "/static/media/featurePlus.7bcf3e345e276356520541d3f444666e.svg",
-    "static/media/register.svg": "/static/media/register.f1f0c620ef428d9d3f1942671bcfb375.svg",
-    "static/media/login.svg": "/static/media/login.80966d41e754f8ef10d4702039c1bae6.svg",
-    "static/media/forgot.svg": "/static/media/forgot.0ffd5c8d78ea83ebec4a284750a1c069.svg",
-    "index.html": "/index.html",
-    "static/media/upwardArrow.svg": "/static/media/upwardArrow.04e082f782fcff67342fb44c0742c399.svg",
-    "static/media/logo.svg": "/static/media/logo.b40efaa618b41120f7c8decd6ef46175.svg",
-    "main.43ff5ac4.css.map": "/static/css/main.43ff5ac4.css.map",
-    "main.565ce3a5.js.map": "/static/js/main.565ce3a5.js.map"
+    "main.css": "/stockmarket-simulator/static/css/main.43ff5ac4.css",
+    "main.js": "/stockmarket-simulator/static/js/main.fc4e1080.js",
+    "static/media/featurePlus.svg": "/stockmarket-simulator/static/media/featurePlus.7bcf3e345e276356520541d3f444666e.svg",
+    "static/media/register.svg": "/stockmarket-simulator/static/media/register.f1f0c620ef428d9d3f1942671bcfb375.svg",
+    "static/media/login.svg": "/stockmarket-simulator/static/media/login.80966d41e754f8ef10d4702039c1bae6.svg",
+    "static/media/forgot.svg": "/stockmarket-simulator/static/media/forgot.0ffd5c8d78ea83ebec4a284750a1c069.svg",
+    "index.html": "/stockmarket-simulator/index.html",
+    "static/media/upwardArrow.svg": "/stockmarket-simulator/static/media/upwardArrow.04e082f782fcff67342fb44c0742c399.svg",
+    "static/media/logo.svg": "/stockmarket-simulator/static/media/logo.b40efaa618b41120f7c8decd6ef46175.svg",
+    "main.43ff5ac4.css.map": "/stockmarket-simulator/static/css/main.43ff5ac4.css.map",
+    "main.fc4e1080.js.map": "/stockmarket-simulator/static/js/main.fc4e1080.js.map"
   },
   "entrypoints": [
     "static/css/main.43ff5ac4.css",
-    "static/js/main.565ce3a5.js"
+    "static/js/main.fc4e1080.js"
   ]
 }
